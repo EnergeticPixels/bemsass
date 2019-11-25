@@ -7,3 +7,10 @@
 @import './abstracts/functions';
 @import './abstracts/mixins';
 @import './abstracts/variables';
+
+// Step 3: Base settings.
+@import './base/base';
+@import './base/helpers';
+@import './base/print';
+@import './base/spacing';
+@import './base/typography';
