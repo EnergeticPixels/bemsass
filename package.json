@@ -1,0 +1,34 @@
+{
+  "name": "bemsass",
+  "version": "0.0.1",
+  "description": "BEMsass is a responsive CSS framework built in SASS and using the BEM naming format.  This includes the best practices and important UI components that I use in all of my front-end developments.",
+  "main": "src/main.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
+    "compile:sass": "node-sass src/sass/main.scss dist/styles/main.compiled.css",
+    "prefix:css": "postcss dist/styles/main.compiled.css --use=autoprefixer --map=false --output=dist/styles/main-prefixed.css",
+    "compress:css": "cleancss --level=1 --source-map --source-map-inline-sources --output dist/styles/main.min.css dist/styles/main-prefixed.css",
+    "remove:iterations": "rimraf dist/styles/*-prefixed.* dist/styles/*.compiled.*",
+    "build:css": "npm-run-all clean compile:sass prefix:css compress:css remove:iterations"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "keywords": [
+    "sass",
+    "bem",
+    "scss"
+  ],
+  "author": "Anthony Jackman <energeticpixels@gmial.com>",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "autoprefixer": "^9.7.2",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3"
+  }
+}
