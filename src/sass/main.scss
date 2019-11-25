@@ -14,3 +14,11 @@
 @import './base/print';
 @import './base/spacing';
 @import './base/typography';
+
+// Step 4: Layout settings.
+@import './layout/grid';
+@import './layout/header';
+@import './layout/sidebar';
+@import './layout/forms';
+@import './layout/footer';
+@import './layout/grid-flex';
