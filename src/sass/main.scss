@@ -2,3 +2,8 @@
 
 // Step 1: Vendor sources
 @import './vendors/normalize/normalize';
+
+// Step 2: Abstracts. Produce no code if rendered by themselves.
+@import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/variables';
